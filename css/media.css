@@ -1,0 +1,106 @@
+@media (max-width: 900px){
+    /* navbar */
+    .navbar_content{
+        justify-content: start;
+    }
+    .menu{
+        display: none
+    }
+    .search{
+        margin-left: 15px;
+    }
+    .menu_burger{
+        display: block;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+        width: 35px;
+        height: 35px;
+        border: solid 2px #000000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+        z-index: 5;
+    }
+    .menu_burger_icon{
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 2px;
+        background-color: #747272;
+        transition: ease 1s;
+    }
+    .menu_burger_icon::before,
+    .menu_burger_icon::after{
+        display: block;
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 2px;
+        background-color: #747272;
+        transition: ease 1s;
+    }
+    .menu_burger_icon::before{
+        top: -7px;
+        left: 0;
+    }
+    .menu_burger_icon::after{
+        top: 7px;
+        left: 0;
+    }
+        .menu_burger_icon.active{
+        background-color: transparent;
+    }
+    .menu_burger_icon.active::before{
+        top: 0;
+        transform: rotate(46deg);
+        transition: ease 1s;
+    }
+    .menu_burger_icon.active::after{
+        top: 0;
+        transform: rotate(-46deg);
+        transition: ease 1s;
+    }
+    .menu_mobile{
+        position: absolute;
+        top: -300px;
+        left: -2px;
+        display: block;
+        width: 100%;
+        background-color: #ccc;
+        transition: ease 2s;
+        transition-delay: 1s;
+    }
+    .menu_mobile.menu_mobile_active{
+        top: 110px;
+        left: -2px;
+        transition: ease 2s;
+        transition-delay: 1s;
+    }
+    .menu_mobile li{
+        display: block;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+    .menu_mobile li:first-child{
+        padding-top: 15px;
+    }
+    .menu_mobile li:last-child{
+        margin-bottom: 0;
+    }
+    .menu_mobile a{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #150C01;
+    }
+}
